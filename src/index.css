@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  @apply text-base-color selection:bg-indigo-400/70 selection:text-[#f5f5f7]
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  cursor: url('images/mouse-cursor.svg'), auto;
+}
+
+#root, body {
+  @apply font-amatic-sc h-full bg-base
+}
+
+.swing:hover {
+  animation: swing 1s ease infinite;
+  -webkit-animation: swing 1s ease infinite;
+  -moz-animation: swing 1s ease infinite;
+}
+
+.bg-base {
+  background: linear-gradient(45deg, #ffefff, #ccbaf4);
+  background-size: 400% 400%;
+
+  -webkit-animation: background 15s ease infinite;
+  -moz-animation: background 15s ease infinite;
+  animation: background 15s ease infinite;
+}
+
+@-webkit-keyframes background {
+  0%{background-position:0% 91%}
+  50%{background-position:100% 10%}
+  100%{background-position:0% 91%}
+}
+@-moz-keyframes background {
+  0%{background-position:0% 91%}
+  50%{background-position:100% 10%}
+  100%{background-position:0% 91%}
+}
+@keyframes background {
+  0%{background-position:0% 91%}
+  50%{background-position:100% 10%}
+  100%{background-position:0% 91%}
+}
+
+@keyframes swing{
+  20%{-webkit-transform:rotate(15deg);transform:rotate(15deg)}
+  40%{-webkit-transform:rotate(-10deg);transform:rotate(-10deg)}
+  60%{-webkit-transform:rotate(5deg);transform:rotate(5deg)}
+  80%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}
+  to{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+}
+@-webkit-keyframes swing{
+  20%{-webkit-transform:rotate(15deg);transform:rotate(15deg)}
+  40%{-webkit-transform:rotate(-10deg);transform:rotate(-10deg)}
+  60%{-webkit-transform:rotate(5deg);transform:rotate(5deg)}
+  80%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}
+  to{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+}
+@-moz-keyframes swing{
+  20%{-webkit-transform:rotate(15deg);transform:rotate(15deg)}
+  40%{-webkit-transform:rotate(-10deg);transform:rotate(-10deg)}
+  60%{-webkit-transform:rotate(5deg);transform:rotate(5deg)}
+  80%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}
+  to{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+}
+
+::-webkit-scrollbar {
+  @apply w-1
 }
