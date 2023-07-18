@@ -4,6 +4,7 @@ import FlexBox from 'components/base/FlexBox';
 import Image from 'components/base/Image';
 import P from 'components/base/P';
 import CardFlexBox from 'components/common/CardFlexBox';
+import CardLink from 'components/common/CardLink';
 import InfoCard from 'components/common/InfoCard';
 import me from 'images/me.png'
 
@@ -24,8 +25,8 @@ export default function Content(){
           </P>
         </InfoCard>
         <InfoCard title='Socials'>
-          <A to='https://github.com/msinemkaya' className='block'>GitHub 😸</A>
-          <A to='https://www.linkedin.com/in/melike-kaya-8bba11283/' className='block'>LinkedIn 😼</A>
+          <CardLink to='https://github.com/msinemkaya'>GitHub 😸</CardLink>
+          <CardLink to='https://www.linkedin.com/in/melike-kaya-8bba11283/'>LinkedIn 😼</CardLink>
         </InfoCard>
       </CardFlexBox>
       <Container className='flex-1'>
