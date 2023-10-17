@@ -13,7 +13,7 @@
 }
 
 #root, body {
-  @apply font-amatic-sc h-full bg-base
+  @apply font-amatic-sc h-full min-h-screen bg-base
 }
 
 .swing:hover {

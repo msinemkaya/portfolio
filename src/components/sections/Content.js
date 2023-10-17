@@ -1,4 +1,3 @@
-import A from 'components/base/A';
 import Container from 'components/base/Container';
 import FlexBox from 'components/base/FlexBox';
 import Image from 'components/base/Image';
@@ -10,7 +9,7 @@ import me from 'images/me.png'
 
 export default function Content(){
 
-  const technologies = ['HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'JavaScript', 'React', 'PHP', 'Laravel']
+  const technologies = ['HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'JavaScript', 'React', 'Next.js', 'PHP', 'Laravel']
 
   return(
     <FlexBox className='md:flex-row flex-col gap-y-8'>
